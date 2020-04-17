@@ -6,14 +6,14 @@ class Complex
 public:
 	Complex();
 	Complex(double a, double b);
-	Complex(double& a);
+	Complex(double a);
 	Complex(int& a);
 	Complex(float& a);
 	Complex(const Complex &c);
 	const Complex operator+(const Complex& c) const;
 	const Complex operator-(const Complex& c) const;
 	const Complex operator*(const Complex& c) const;
-	const Complex operator*(const double c) const;
+	const Complex operator*(const double& c) const;
 	const Complex operator/(const Complex& c) const;
 	const Complex operator/(const double c) const;
 	Complex& operator=(const Complex& right);

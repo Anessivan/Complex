@@ -3,10 +3,10 @@
 #include <locale>
 int main()
 {
-	Complex a, b(1, 1), c(b) , d(2, 15);
+	Complex a, b(1, 1), c(b) , d(2.0, 15.0);
 	setlocale(LC_ALL, "rus");
 	c = b + d;
-	std::cout << a << std::endl << "¬ведите число: ";
+	std::cout << "»значальное число:" << a << std::endl << "¬ведите число: ";
 	std::cin >> a;
 	std::cout << "¬веденое число: " << a << std::endl;
 	std::cout << "»значальное b: " << b << std::endl;

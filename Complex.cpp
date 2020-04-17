@@ -11,7 +11,7 @@ Complex::Complex(double a, double b)
 	Im = b;
 }
 
-Complex::Complex(double& a)
+Complex::Complex(double a)
 {
 	Re = a;
 	Im = 0;
@@ -59,9 +59,11 @@ const Complex Complex::operator*(const Complex& c) const
 	return a;
 }
 
-const Complex Complex::operator*(const double c) const
+const Complex Complex::operator*(const double& c) const
 {
-	Complex a(c * Re, c* Im);
+	double re = c * Re;
+	double im = c * Im;
+	Complex a(re, im);
 	return a;
 }
 
@@ -75,7 +77,9 @@ const Complex Complex::operator/(const Complex& c) const
 
 const Complex Complex::operator/(const double c) const
 {
-	Complex a(Re / c, Im / c);
+	double re = Re / c;
+	double im = Im / c;
+	Complex a(re, im);
 	return Complex();
 }
 
